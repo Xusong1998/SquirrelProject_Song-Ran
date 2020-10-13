@@ -11,7 +11,7 @@ class Command(BaseCommand):
         parser.add_argument('csv_file')
 
     def handle(self, *args, **options):
-        with open(options['csv_file']) as fp:
+        with open(options["csv_file"]) as fp:
             reader = csv.DictReader(fp)
             data = list(reader)
 
