@@ -37,5 +37,8 @@ class Squirrel(models.Model):
     Other_Interactions = models.CharField(max_length = 40, blank = True)
     Lat_Long = models.CharField(max_length = 80)
 
+    def __str__(self):
+        return self.Unique_Squirrel_ID
+
 
 # Create your models here.
