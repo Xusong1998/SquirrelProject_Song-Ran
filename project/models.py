@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 class Squirrel(models.Model):
 
@@ -36,9 +37,10 @@ class Squirrel(models.Model):
     Runs_from = models.CharField(max_length = 10, choices = Running_Choices)
     Other_Interactions = models.CharField(max_length = 40, blank = True)
     Lat_Long = models.CharField(max_length = 80)
+    
 
     def __str__(self):
-        return self.Unique_Squirrel_ID
+        return f"ID: {self.Unique_Squirrel_ID} Date: {self.Date}"
 
 
 # Create your models here.

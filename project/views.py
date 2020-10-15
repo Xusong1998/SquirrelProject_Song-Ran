@@ -13,4 +13,9 @@ def map(request):
     return render(request, 'project/map.html',context)
 
 def sightings(request):
-    return render(request, 'project/sightings.html',{})
+    squirrels = Squirrel.objects.all()
+    context = {
+            'squirrels': squirrels,
+            }
+
+    return render(request, 'project/sightings.html',context)
