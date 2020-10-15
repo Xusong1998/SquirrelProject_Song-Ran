@@ -10,6 +10,7 @@ def map(request):
     context = {
             'sightings': squirrels,
             }
-    
     return render(request, 'project/map.html',context)
-# Create your views here.
+
+def sightings(request):
+    return render(request, 'project/sightings.html',{})
