@@ -50,3 +50,8 @@ def add(request):
             return JsonResponse({'errors': form.errors}, status = 400)
 
     return JsonResponse({})
+
+def showthis(request):
+    Squirrel.objects.all().delete()
+    context = {}
+    return render(request, 'project/home.html', context)

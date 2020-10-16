@@ -4,5 +4,8 @@ from .models import Squirrel
 class AddSightingsForm(ModelForm):
     class Meta:
         model = Squirrel
-        fields = []
+        fields = [
+                'X',
+                'Y'
+        ]
 
