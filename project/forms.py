@@ -9,3 +9,15 @@ class AddSightingsForm(ModelForm):
                 'Y'
         ]
 
+class UpdateForm(ModelForm):
+    class Meta:
+        model = Squirrel
+        fields = [
+                'X',
+                'Y',
+                'Unique_Squirrel_ID',
+                'Shift',
+                'Date',
+                'Age'
+                ]
+

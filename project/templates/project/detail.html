@@ -5,6 +5,15 @@
 		<br>Date of Sighting: {{ squirrel.Date }}
 		<br>Coordinates(X,Y): {{ squirrel.X }},{{ squirrel.Y }}
 		</p>
+
+		<form action='' method='POST'>
+			{% csrf_token %}
+			{{form}}
+
+			<input type='update' name='Update'>
+
+		</form>
+
 	</body>
 
 </html>
