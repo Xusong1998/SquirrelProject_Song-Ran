@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Squirrel
 from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
+from .forms import AddSightingsForm
 
 def index(request):
     return render(request, 'project/home_page.html',{})
@@ -39,4 +41,12 @@ def stat(request):
     return render(request, 'project/stat.html', context)
 
 def add(request):
-    return render(request, 'project/add.html',{})
+    if request.method == 'PSOR':
+        form  = AddSigthingsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return JsonResponse({})
+        else:
+            return JsonResponse({'errors': form.errors}, status = 400)
+
+    return JsonResponse({})

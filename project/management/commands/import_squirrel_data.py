@@ -54,4 +54,8 @@ class Command(BaseCommand):
 
             ))
 
-        Squirrel.objects.bulk_create(squirrels)
+
+
+       Squirrel.objects.bulk_create(squirrels)
+
+       Squirrel.objects.filter(Unique_Squirrel_ID = 37E-PM-1006-03).delete()
