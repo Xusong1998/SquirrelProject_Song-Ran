@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Squirrel
+from django.shortcuts import get_object_or_404
 
 def index(request):
     return render(request, 'project/home_page.html',{})
@@ -21,8 +22,8 @@ def sightings(request):
     return render(request, 'project/sightings.html',context)
 
 
-def detail(request,Unique_ID):
-    squirrel = get_object_or_404(Squirrel, Unique_Squirrel_ID=Unique_ID)
+def detail(request, squirrel_id):
+    squirrel = get_object_or_404(Squirrel, pk=squirrel_id)
     context = {
             'squirrel':  squirrel,
             }
