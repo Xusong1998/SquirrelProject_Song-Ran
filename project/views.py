@@ -37,3 +37,5 @@ def stat(request):
             
     return render(request, 'project/stat.html', context)
 
+def add(request):
+    return render(request, 'project/add.html',{})
