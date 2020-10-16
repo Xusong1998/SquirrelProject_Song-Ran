@@ -20,6 +20,7 @@ def sightings(request):
 
     return render(request, 'project/sightings.html',context)
 
+
 def detail(request,Unique_ID):
     squirrel = get_object_or_404(Squirrel, Unique_Squirrel_ID=Unique_ID)
     context = {
@@ -27,3 +28,12 @@ def detail(request,Unique_ID):
             }
 
     return render(request, 'project/detail.html',context)
+
+def stat(request):
+    squirrels = Squirrel.objects.all()
+    context = {
+            'squirrels': squirrels,
+            }
+            
+    return render(request, 'project/stat.html', context)
+

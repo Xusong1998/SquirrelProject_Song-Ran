@@ -8,7 +8,10 @@ urlpatterns = [
         path('', views.index),
         path('map', views.map),
         path('sightings', views.sightings),
+
         path('<str:Unique_Squirrel_ID>/', views.detail, name='detail'),
-        ]
+    
+        path('sightings/stats', views.stat)]
+
 
 
