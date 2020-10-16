@@ -43,4 +43,4 @@ class Squirrel(models.Model):
         return f"ID: {self.Unique_Squirrel_ID} Date: {self.Date}"
 
 
-# Create your models here.
+# Create your models here
