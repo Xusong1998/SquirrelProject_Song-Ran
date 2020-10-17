@@ -50,17 +50,10 @@ def stat(request):
     return render(request, 'project/stat.html', context)
 
 def add(request):
-    if request.method == 'PSOR':
-        form  = AddSigthingsForm(request.POST)
+    if request.method == 'POST':
+        form = AddSightingsForm(request.POST)
         if form.is_valid():
             form.save()
-            return JsonResponse({})
-        else:
-            return JsonResponse({'errors': form.errors}, status = 400)
+            return redirect('/sightings')
 
-    return JsonResponse({})
-
-def showthis(request):
-    Squirrel.objects.all().delete()
-    context = {}
-    return render(request, 'project/home.html', context)
+    return render(request, 'project/add.html', {})

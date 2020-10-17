@@ -11,8 +11,7 @@ urlpatterns = [
 
         path('sightings/<str:Unique_Squirrel_ID>/', views.detail, name='detail'),     
         path('sightings/add', views.add, name = 'add'),
-        path('sightings/stats', views.stat),
-        path('delete', views.showthis),
+        path('sightings/stats', views.stat)
         ]
 
 

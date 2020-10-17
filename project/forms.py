@@ -6,7 +6,10 @@ class AddSightingsForm(ModelForm):
         model = Squirrel
         fields = [
                 'X',
-                'Y'
+                'Y',
+                'Unique_Squirrel_ID',
+                'Shift',
+                'Date'
         ]
 
 class UpdateForm(ModelForm):
