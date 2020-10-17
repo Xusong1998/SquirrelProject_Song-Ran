@@ -55,5 +55,6 @@ def add(request):
         if form.is_valid():
             form.save()
             return redirect('/sightings')
-
+        else:
+            return JsonResponse({'errors': form.errors}, status = 400)
     return render(request, 'project/add.html', {})
