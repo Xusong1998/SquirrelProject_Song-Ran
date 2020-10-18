@@ -1,4 +1,26 @@
-<!doctype html>
+{% extends 'project/base.html' %}
+{% load static %}
+{% block title %} -Update Squirrel Information {% endblock %} 
+{% block main  %}
+
 <html>
-	<body> Hi, Welcome to Our Homepage. </body>
+	<body>
+	  <div class="album py-5 bg-light">
+	    <div class = 'container'>
+	      <div class = 'row'>
+		 <div class="col-md-6">
+			<b style="font-size:25px">Hi, Welcome to Squirrel's Homepage!.</b>
+		 </div>
+		 <p></p>
+            	 <div class="card mb-5 shadow-sm">
+              	   <img
+                   width="800" height="450" preserveAspectRatio="xMidYMid slice"
+                   focusable="false" role="img"
+                   src="https://www.pbs.org/wgbh/nova/media/original_images/iStock-473012660.jpg"></img>
+            	 </div>
+	     </div>
+	   </div>
+	  </div> 
+	</body>
 </html>
+{% endblock %}
