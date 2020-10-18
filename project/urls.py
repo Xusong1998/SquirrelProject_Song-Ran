@@ -6,13 +6,12 @@ app_name = 'project'
 
 urlpatterns = [
         path('', views.index),
-        path('map', views.map),
-        path('sightings', views.sightings),
+        path('map', views.map, name = 'map'),
+        path('sightings', views.sightings, name = 'sightings'),
 
         path('sightings/<str:Unique_Squirrel_ID>/', views.detail, name='detail'),     
         path('sightings/add', views.add, name = 'add'),
-        path('sightings/stats', views.stat),
-        path('home', views.showthis)
+        path('sightings/stats', views.stat, name = 'stats'),
         ]
 
 
