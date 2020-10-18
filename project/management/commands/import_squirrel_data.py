@@ -33,6 +33,7 @@ class Command(BaseCommand):
                     Hectare_Squirrel_Number = dict_['Hectare Squirrel Number'],
                     Age = dict_['Age'],
                     Primary_Fur_Color = dict_['Primary Fur Color'],
+                    Highlight_Fur_Color = dict_['Highlight Fur Color'],
                     Combination_of_Primary_and_Highlight_Color = dict_['Combination of Primary and Highlight Color'],
                     Color_notes = dict_['Color notes'],
                     Location = dict_['Location'],

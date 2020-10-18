@@ -58,3 +58,4 @@ def add(request):
         else:
             return JsonResponse({'errors': form.errors}, status = 400)
     return render(request, 'project/add.html', {})
+
